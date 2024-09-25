@@ -25,7 +25,7 @@ function App() {
         console.log(err.message)
       }
     }
-    //fetchAPIData()
+    fetchAPIData()
   }, [])
 
   return (
@@ -38,7 +38,7 @@ function App() {
         </div>
       )}
       {showModal && <SideBar handleToggleModal={handleToggleModal} />}
-      <Footer handleToggleModal={handleToggleModal} />
+      {data && (<Footer handleToggleModal={handleToggleModal} />)}
     </>
   );
 }
