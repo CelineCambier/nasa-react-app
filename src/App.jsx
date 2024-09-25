@@ -31,14 +31,14 @@ function App() {
   return (
     <>
       {data ? (
-        <Main />
+        <Main data={data} />
       ) : (
         <div className="loadingState">
           <i className="fa-solid fa-gear"></i>
         </div>
       )}
-      {showModal && <SideBar handleToggleModal={handleToggleModal} />}
-      {data && (<Footer handleToggleModal={handleToggleModal} />)}
+      {showModal && (<SideBar data={data} handleToggleModal={handleToggleModal} />)}
+      {data && (<Footer data={data} handleToggleModal={handleToggleModal} />)}
     </>
   );
 }
